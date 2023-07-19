@@ -2,6 +2,8 @@ language: python
 
 matrix:
   include:
+    - env: TOX_ENV=py310-djangomain
+      python: 3.10
     - env: TOX_ENV=py39-djangomain
       python: 3.9
     - env: TOX_ENV=py38-djangomain
@@ -60,6 +62,8 @@ matrix:
     - env: TOX_ENV=docs
 
   allow_failures:
+    - env: TOX_ENV=py310-djangomain
+      python: 3.10
     - env: TOX_ENV=py39-djangomain
       python: 3.9
     - env: TOX_ENV=py38-djangomain
